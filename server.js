@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS roadmap(id INTEGER PRIMARY KEY AUTOINCREMENT, phase T
 
 function seed(){
  if(!db.prepare("SELECT id FROM profile WHERE id=1").get()){
-  const d=JSON.parse(fs.readFileSync(path.join(DATA_DIR,"seed.json")));
+  const d=JSON.parse(fs.readFileSync(path.join(__dirname,"seed.json")));
   db.prepare(`INSERT INTO profile(id,name,headline,positioning,bio,location,education,cgpa,graduation,email,github,linkedin,resume) VALUES(1,@name,@headline,@positioning,@bio,@location,@education,@cgpa,@graduation,@email,@github,@linkedin,@resume)`).run(d.profile);
   const insStat=db.prepare("INSERT INTO stats(value,label) VALUES(?,?)"); d.stats.forEach(x=>insStat.run(x.value,x.label));
   const insP=db.prepare("INSERT INTO projects(title,category,year,featured,description,result,tags,github,demo) VALUES(?,?,?,?,?,?,?,?,?)"); d.projects.forEach(x=>insP.run(x.title,x.category,x.year,x.featured,x.description,x.result,x.tags,x.github,x.demo));
