@@ -33,7 +33,7 @@ function seed(){
   const insR=db.prepare("INSERT INTO roadmap(phase,title,text) VALUES(?,?,?)"); d.roadmap.forEach(x=>insR.run(x.phase,x.title,x.text));
  }
     const admin = process.env.ADMIN_USERNAME || "sujesh";
-    const pass = process.env.ADMIN_PASSWORD || "sujesh@123";
+    const pass = process.env.ADMIN_PASSWORD || "change-me";
 
     const existingAdmin = db.prepare(
     "SELECT id FROM admins ORDER BY id LIMIT 1"
