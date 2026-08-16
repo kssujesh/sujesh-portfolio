@@ -1,0 +1,242 @@
+{
+  "profile": {
+    "name": "K S Sujesh",
+    "headline": "AI & Data Science Student",
+    "positioning": "Aspiring ML Engineer & Data Scientist",
+    "bio": "I build data-driven and intelligent systems with Python, machine learning, deep learning, analytics, and a growing interest in AI/GenAI.",
+    "location": "Karnataka, India",
+    "education": "B.Tech \u2014 Artificial Intelligence & Data Science, NMAMIT",
+    "cgpa": "9.14",
+    "graduation": "2027",
+    "email": "kssujesh27@gmail.com",
+    "github": "https://github.com/kssujesh",
+    "linkedin": "https://www.linkedin.com/in/k-s-sujesh-5209702a7/",
+    "resume": "assets/Sujesh_Resume.pdf"
+  },
+  "stats": [
+    {
+      "value": "9.14",
+      "label": "B.Tech CGPA"
+    },
+    {
+      "value": "5",
+      "label": "Portfolio Projects"
+    },
+    {
+      "value": "3",
+      "label": "Experience Highlights"
+    },
+    {
+      "value": "2027",
+      "label": "Expected Graduation"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Automated Plant Disease Classification",
+      "category": "Machine Learning",
+      "year": "2025",
+      "featured": 1,
+      "description": "DenseNet-based multi-class image classification work for plant disease detection, developed during a research internship.",
+      "result": "99% reported accuracy",
+      "tags": "Python, DenseNet, CNN, Deep Learning, Computer Vision",
+      "github": "https://github.com/kssujesh",
+      "demo": ""
+    },
+    {
+      "title": "AI Crowd Analysis & Early Stampede Warning",
+      "category": "AI",
+      "year": "2025",
+      "featured": 1,
+      "description": "AI-oriented crowd monitoring and risk-detection concept focused on identifying dangerous crowd conditions early.",
+      "result": "Real-world safety use case",
+      "tags": "AI, Computer Vision, Risk Detection",
+      "github": "https://github.com/kssujesh",
+      "demo": ""
+    },
+    {
+      "title": "Customer Churn Prediction",
+      "category": "Data Science",
+      "year": "2025",
+      "featured": 1,
+      "description": "Supervised learning project for predicting customer churn, supported by data exploration and classification workflows.",
+      "result": "End-to-end ML workflow",
+      "tags": "Python, Pandas, Scikit-learn, EDA, Classification",
+      "github": "https://github.com/kssujesh",
+      "demo": ""
+    },
+    {
+      "title": "Temple Management System",
+      "category": "Software",
+      "year": "2024",
+      "featured": 0,
+      "description": "Full-stack management application developed using Node.js, TypeScript, and MySQL.",
+      "result": "Full-stack implementation",
+      "tags": "Node.js, TypeScript, MySQL",
+      "github": "https://github.com/kssujesh",
+      "demo": ""
+    },
+    {
+      "title": "Titanic Dataset EDA",
+      "category": "Analytics",
+      "year": "2024",
+      "featured": 0,
+      "description": "Exploratory analysis covering data cleaning, visualization, and pattern analysis in the Titanic dataset.",
+      "result": "Analytics foundation",
+      "tags": "Python, Pandas, EDA, Visualization",
+      "github": "https://github.com/kssujesh",
+      "demo": ""
+    }
+  ],
+  "experience": [
+    {
+      "period": "Jun 2025 \u2014 Aug 2025",
+      "role": "Research Intern",
+      "organization": "Manipal Institute of Technology",
+      "description": "Developed a DenseNet CNN model for plant disease detection, achieving 99% reported accuracy. Contributed to a research paper currently under journal submission."
+    },
+    {
+      "period": "Jan 2025 \u2014 Feb 2025",
+      "role": "Employment Readiness Programme Lead",
+      "organization": "NMAMIT",
+      "description": "Led workshops on resume building, coding, interview skills, and employability."
+    },
+    {
+      "period": "Nov 2023 \u2014 Mar 2024",
+      "role": "Student Intern",
+      "organization": "ATAL Incubation Centre",
+      "description": "Worked with IoT, VR, and 3D scanning technologies for prototype development."
+    }
+  ],
+  "education": [
+    {
+      "period": "2023 \u2014 2027",
+      "title": "B.Tech \u2014 Artificial Intelligence & Data Science",
+      "organization": "NMAMIT",
+      "detail": "CGPA: 9.14"
+    },
+    {
+      "period": "2021 \u2014 2023",
+      "title": "Pre-University \u2014 PCMB",
+      "organization": "Dr. NSAM PU College, Nitte",
+      "detail": "Aggregate: 93%"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Python",
+      "group": "Core",
+      "level": "Strong"
+    },
+    {
+      "name": "SQL",
+      "group": "Data",
+      "level": "Growing"
+    },
+    {
+      "name": "Pandas",
+      "group": "Data",
+      "level": "Strong"
+    },
+    {
+      "name": "NumPy",
+      "group": "Data",
+      "level": "Strong"
+    },
+    {
+      "name": "Scikit-learn",
+      "group": "ML",
+      "level": "Strong"
+    },
+    {
+      "name": "Machine Learning",
+      "group": "ML",
+      "level": "Strong"
+    },
+    {
+      "name": "Deep Learning",
+      "group": "ML",
+      "level": "Strong"
+    },
+    {
+      "name": "Git & GitHub",
+      "group": "Tools",
+      "level": "Strong"
+    },
+    {
+      "name": "Jupyter",
+      "group": "Tools",
+      "level": "Strong"
+    },
+    {
+      "name": "Excel",
+      "group": "Analytics",
+      "level": "Growing"
+    },
+    {
+      "name": "HTML / CSS",
+      "group": "Web",
+      "level": "Working"
+    },
+    {
+      "name": "JavaScript",
+      "group": "Web",
+      "level": "Working"
+    },
+    {
+      "name": "Node.js",
+      "group": "Web",
+      "level": "Working"
+    },
+    {
+      "name": "TypeScript",
+      "group": "Web",
+      "level": "Working"
+    },
+    {
+      "name": "GenAI / LLMs",
+      "group": "Exploring",
+      "level": "Exploring"
+    },
+    {
+      "name": "PyTorch",
+      "group": "Next",
+      "level": "Learning"
+    },
+    {
+      "name": "Power BI",
+      "group": "Next",
+      "level": "Learning"
+    }
+  ],
+  "certifications": [
+    "Data Analytics: Turning Raw Data into Real Decisions \u2014 Innomatics Research Labs",
+    "Java Bootcamp \u2014 LetsUpgrade",
+    "GenAI 101: Mastering LLMs \u2014 LetsUpgrade",
+    "Agentic AI Fundamentals \u2014 Salesforce Trailhead",
+    "AI for Students \u2014 NxtWave"
+  ],
+  "achievements": [
+    "Technical Lead \u2014 HackerEarth Club, NMAMIT",
+    "Stanika Brahmana Scholarship \u2014 Academic Excellence",
+    "Stanika Cricket Trophy \u2014 Winner for 4 consecutive years",
+    "Yakshagana Performer \u2014 Multiple public stage performances"
+  ],
+  "roadmap": [
+    {
+      "phase": "NOW",
+      "title": "Data + ML Foundations",
+      "text": "Strengthen SQL, statistics, EDA, model evaluation, and practical analytics."
+    },
+    {
+      "phase": "NEXT",
+      "title": "ML Engineering",
+      "text": "Add APIs, deployment, Docker, cloud fundamentals, and reproducible ML workflows."
+    },
+    {
+      "phase": "EXPLORING",
+      "title": "AI / GenAI",
+      "text": "Build practical projects with LLMs, embeddings, RAG, and agentic systems."
+    }
+  ]
+}

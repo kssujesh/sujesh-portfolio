@@ -1,0 +1,32 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="<%= d.profile.name %> — <%= d.profile.positioning %>">
+<title><%= d.profile.name %> — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/site.css"></head><body>
+<header class="nav"><a class="logo" href="#home">SKS<span>.</span></a><button class="hamb" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+<nav><a href="#work">Work</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#journey">Journey</a><a href="#contact">Contact</a></nav></header>
+<main>
+<section class="hero wrap" id="home"><div><label>AI & DATA SCIENCE · <%= d.profile.location.toUpperCase() %></label><h1>Building with<br><i>data & intelligence.</i></h1>
+<p class="lead"><%= d.profile.bio %></p><div class="actions"><a class="btn dark" href="#work">Explore my work ↗</a><a class="btn" href="/<%= d.profile.resume %>">Resume ↗</a></div>
+<div class="links"><a href="<%= d.profile.github %>" target="_blank">GitHub ↗</a><a href="<%= d.profile.linkedin %>" target="_blank">LinkedIn ↗</a><a href="mailto:<%= d.profile.email %>">Email ↗</a></div></div>
+<div class="hero-card"><div class="tiny"><span>PROFILE / 01</span><span>2026</span></div><div class="initials">SKS</div><div class="grid"><span>FOCUS</span><b>ML · DS · AI</b><span>DEGREE</span><b>B.Tech AI & DS</b><span>CGPA</span><b><%= d.profile.cgpa %> / 10</b><span>STATUS</span><b>Building & learning</b></div><div class="foot">Currently exploring → GenAI</div></div></section>
+<section class="stats wrap"><% d.stats.forEach(s=>{ %><div class="stat"><b><%= s.value %></b><small><%= s.label %></small></div><% }) %></section>
+<section class="section wrap" id="work"><div class="head"><div><label>SELECTED WORK</label><h2>Projects that show<br>how I <i>think.</i></h2></div><p>A growing body of work across machine learning, analytics, AI, and software.</p></div>
+<div class="filters"><button class="filter active" data-cat="All">All</button><% [...new Set(d.projects.map(p=>p.category))].forEach(c=>{ %><button class="filter" data-cat="<%= c %>"><%= c %></button><% }) %></div>
+<div class="projects" id="projectGrid"><% d.projects.forEach(p=>{ %><article class="project" data-category="<%= p.category %>"><div class="tiny"><span><%= p.category.toUpperCase() %></span><span><%= p.year %></span></div><h3><%= p.title %></h3><p><%= p.description %></p><b class="result"><%= p.result %></b><div class="tags"><% p.tags.forEach(t=>{ %><span><%= t %></span><% }) %></div><div class="project-links"><% if(p.github){ %><a href="<%= p.github %>" target="_blank">GitHub ↗</a><% } if(p.demo){ %><a href="<%= p.demo %>" target="_blank">Live demo ↗</a><% } %></div></article><% }) %></div></section>
+
+<section class="dark" id="experience"><div class="wrap section"><div class="head"><div><label>EXPERIENCE</label><h2>Learning by <i>doing.</i></h2></div><p>Research, leadership, prototyping, and technical work.</p></div>
+<% d.experience.forEach(x=>{ %><article class="exp"><small><%= x.period %></small><div><h3><%= x.role %></h3><b><%= x.organization %></b><p><%= x.description %></p></div></article><% }) %></div></section>
+
+<section class="section wrap" id="skills"><div class="head"><div><label>SKILLS</label><h2>A stack that keeps <i>evolving.</i></h2></div><p>Skills can be added directly through the Portfolio Manager.</p></div><div class="skills"><div class="cloud"><% d.skills.forEach(s=>{ %><span><b><%= s.name %></b><small><%= s.group_name %> · <%= s.level %></small></span><% }) %></div><aside><small>/ CURRENT DIRECTION</small><h3>Data Science + ML</h3><p>My strongest overlap today is Data Science and Machine Learning. I'm building toward ML Engineering while exploring AI/GenAI.</p></aside></div></section>
+
+<section class="roadmap" id="journey"><div class="wrap section"><div class="head"><div><label>CAREER JOURNEY</label><h2>Build today.<br><i>Grow tomorrow.</i></h2></div><p>A living roadmap that can evolve with new skills, projects, research, and roles.</p></div><div class="road-grid"><% d.roadmap.forEach(x=>{ %><article><small><%= x.phase %></small><h3><%= x.title %></h3><p><%= x.text %></p></article><% }) %></div></div></section>
+
+<section class="section wrap two"><div><label>EDUCATION</label><h2>Foundation in<br><i>AI & Data Science.</i></h2><% d.education.forEach(x=>{ %><div class="edu"><small><%= x.period %></small><b><%= x.title %></b><span><%= x.organization %> · <%= x.detail %></span></div><% }) %></div>
+<div><label>CREDENTIALS & MORE</label><h2>Beyond the<br><i>classroom.</i></h2><% d.certifications.forEach(x=>{ %><div class="cert"><%= x.text %></div><% }) %><div class="ach"><% d.achievements.forEach(x=>{ %><div>↳ <%= x.text %></div><% }) %></div></div></section>
+<section class="contact" id="contact"><div class="wrap"><label>LET'S CONNECT</label><h2>Have a problem worth<br><i>solving?</i></h2><p>Interested in internships, research, ML/data projects, and collaborations.</p><a class="email" href="mailto:<%= d.profile.email %>"><%= d.profile.email %></a><div class="links center"><a href="<%= d.profile.github %>" target="_blank">GitHub ↗</a><a href="<%= d.profile.linkedin %>" target="_blank">LinkedIn ↗</a></div></div></section>
+</main><footer><span>© <%= new Date().getFullYear() %> K S Sujesh</span><a href="/admin">Portfolio Manager</a></footer>
+<script>document.querySelectorAll(".filter").forEach(b=>b.onclick=()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");let c=b.dataset.cat;document.querySelectorAll(".project").forEach(p=>p.style.display=c==="All"||p.dataset.category===c?"flex":"none")})</script>
+</body></html>
