@@ -32,11 +32,29 @@ function seed(){
   const insA=db.prepare("INSERT INTO achievements(text) VALUES(?)"); d.achievements.forEach(x=>insA.run(x));
   const insR=db.prepare("INSERT INTO roadmap(phase,title,text) VALUES(?,?,?)"); d.roadmap.forEach(x=>insR.run(x.phase,x.title,x.text));
  }
- const admin=process.env.ADMIN_USERNAME||"sujesh";
- const pass=process.env.ADMIN_PASSWORD||"change-me";
- if(!db.prepare("SELECT id FROM admins WHERE username=?").get(admin)){
-  db.prepare("INSERT INTO admins(username,password_hash) VALUES(?,?)").run(admin,bcrypt.hashSync(pass,12));
- }
+    const admin = process.env.ADMIN_USERNAME || "sujesh";
+    const pass = process.env.ADMIN_PASSWORD || "change-me";
+
+    const existingAdmin = db.prepare(
+    "SELECT id FROM admins ORDER BY id LIMIT 1"
+    ).get();
+
+    if (!existingAdmin) {
+    db.prepare(
+        "INSERT INTO admins(username,password_hash) VALUES(?,?)"
+    ).run(
+        admin,
+        bcrypt.hashSync(pass, 12)
+    );
+    } else {
+    db.prepare(
+        "UPDATE admins SET username=?, password_hash=? WHERE id=?"
+    ).run(
+        admin,
+        bcrypt.hashSync(pass, 12),
+        existingAdmin.id
+    );
+    }
 }
 seed();
 
