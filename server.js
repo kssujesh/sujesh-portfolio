@@ -58,7 +58,13 @@ function seed(){
 }
 seed();
 
-app.set("view engine","ejs"); app.set("views",path.join(__dirname,"views"));
+app.set("view engine","ejs");
+app.set("views",path.join(__dirname,"views"));
+
+if (process.env.NODE_ENV === "production") {
+    app.set("trust proxy", 1);
+}
+
 app.use(helmet({contentSecurityPolicy:false}));
 app.use(express.urlencoded({extended:true})); app.use(express.json());
 app.use(session({secret:process.env.SESSION_SECRET||"dev-only-change-me",resave:false,saveUninitialized:false,cookie:{httpOnly:true,sameSite:"lax",secure:process.env.NODE_ENV==="production"}}));
